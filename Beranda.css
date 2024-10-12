@@ -1,36 +1,133 @@
-/* NAVBAR */
+.wrapper{
+    display: flex;
+}
 
+/* NAVBAR */
 .navbar{
     background-color: #393E46;
+    width: 100%;
+    position: fixed;    
 }
 
 .navbar img{
     width: 40px;
 }
 
-.navbar a{
-    color: white;
-}
-
 .navbar-toggler {
     border-color: white;
-    /* Changes the border color of the toggler */
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    /* Replaces the default icon with a white icon */
+}
+
+
+#profile .dropdown-menu {
+    /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Smooth transition */
+    text-align: center;
+}
+
+#profile .profile-icon {
+    width: 40px;
+    /* Adjust the size */
+}
+
+#profile:hover .profile-icon {
+    filter: brightness(0.8);
+    /* Optional: Darken the icon when hovered */
+}
+
+#profile a{
+    font-size: small;
+}
+
+#profile .line{
+    height: 1px;
+    /* Height of the line */
+    background-color: #ddd;
+    /* Color of the line */
+     margin: 10px 0;
+    /* Spacing above and below the line */
+    width: 100%;
+    /* Full width of the dropdown */
 }
 
 /* Sidebar */
 
 .sidebar{
-    height: 100vh;
+    height: calc(100vh - 56px);
+    /* Subtract the height of the navbar (56px) */
     width: 15vw;
-    background-color: #00ADB5;
+    background-color: #393E46;
+    margin-top: 66px;
+    position: fixed;
+    /* Keep the sidebar in a fixed position */
+    top: 0;
 }
 
 .sidebar a{
     text-decoration: none;
     color: white;
 }
+
+.sidebar-title{
+    color: rgb(186, 187, 189);
+    margin-left: 1vw;
+    font-size: small;
+}
+
+.sidebar span{
+    display: inline;
+}
+
+@media (max-width: 720px){
+    .navbar{
+        height: 60px;
+    }
+
+    .sidebar{
+        display: none;
+    }
+}
+
+
+/* Dropdown */
+#drop-course .dropdown-menu {
+    position: relative;
+        /* Ensure the dropdown expands within the document flow */
+    display: block;
+        /* Override Bootstrap's default display for dropdown */
+        /* Initially hide the dropdown */
+    
+    background-color: transparent;
+        /* Optional: Add transparency */
+        border: none;
+}
+
+#drop-course .dropdown-menu li a{
+    font-size: small;
+}
+
+#drop-course .dropdown-menu.show {
+    position: relative;
+    opacity: 0;
+    /* Make sure it stays in the flow of the document */
+}
+
+#drop-course .dropdown-item {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Ensure the text is visible against the transparent background */
+}
+
+#drop-course .dropdown-menu a:hover{
+    color: black;
+    background-color: transparent;
+}
+
+
+
