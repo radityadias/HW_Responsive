@@ -1,16 +1,16 @@
-.wrapper{
+.wrapper {
     display: flex;
 }
 
 /* NAVBAR */
-.navbar{
+.navbar {
     background-color: #393E46;
     width: 100%;
     position: fixed;
-    z-index: 1000;    
+    z-index: 1000;
 }
 
-.navbar img{
+.navbar img {
     width: 40px;
 }
 
@@ -40,26 +40,24 @@
     /* Optional: Darken the icon when hovered */
 }
 
-#profile a{
+#profile a {
     font-size: small;
 }
 
-#profile .line{
+#profile .line {
     height: 1px;
     /* Height of the line */
     background-color: #ddd;
     /* Color of the line */
-     margin: 10px 0;
+    margin: 10px 0;
     /* Spacing above and below the line */
     width: 100%;
     /* Full width of the dropdown */
 }
 
-
-
 /* Sidebar */
 
-.sidebar{
+.sidebar {
     height: calc(100vh - 56px);
     /* Subtract the height of the navbar (56px) */
     width: 15vw;
@@ -70,18 +68,18 @@
     top: 0;
 }
 
-.sidebar a{
+.sidebar a {
     text-decoration: none;
     color: white;
 }
 
-.sidebar-title{
+.sidebar-title {
     color: rgb(186, 187, 189);
     margin-left: 1vw;
     font-size: small;
 }
 
-.sidebar span{
+.sidebar span {
     display: inline;
 }
 
@@ -91,17 +89,17 @@
 /* Dropdown */
 #drop-course .dropdown-menu {
     position: relative;
-        /* Ensure the dropdown expands within the document flow */
+    /* Ensure the dropdown expands within the document flow */
     display: block;
-        /* Override Bootstrap's default display for dropdown */
-        /* Initially hide the dropdown */
-    
+    /* Override Bootstrap's default display for dropdown */
+    /* Initially hide the dropdown */
+
     background-color: transparent;
-        /* Optional: Add transparency */
-        border: none;
+    /* Optional: Add transparency */
+    border: none;
 }
 
-#drop-course .dropdown-menu li a{
+#drop-course .dropdown-menu li a {
     font-size: small;
 }
 
@@ -119,44 +117,43 @@
     /* Ensure the text is visible against the transparent background */
 }
 
-#drop-course .dropdown-menu a:hover{
+#drop-course .dropdown-menu a:hover {
     color: black;
     background-color: transparent;
 }
 
-.konten-wrapper{
+/* Konten */
+
+.konten-wrapper {
     margin-left: 15vw;
-        /* Space for the sidebar */
-        margin-top: 56px;
-        /* Space for the navbar */
-        padding: 20px;
-        /* Padding for content */
-        width: calc(100% - 15vw);
-        /* Fill remaining width */
+    /* Space for the sidebar */
+    margin-top: 56px;
+    /* Space for the navbar */
+    padding: 20px;
+    /* Padding for content */
+    width: calc(100% - 15vw);
+    /* Fill remaining width */
 }
 
-.konten-wrapper .card img{
-    height: 23vh;
-    width: 100%;
+#user img {
+    width: 80%;
 }
 
 
 
-@media(max-width: 992px){
-    .sidebar span{
+.wrapper-button {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media(max-width: 992px) {
+    .sidebar span {
         display: none;
     }
 
-    .sidebar{
+    .sidebar {
         width: 7vw;
-    }
-
-    .notif {
-        margin-right: 15px;
-    }
-
-    .konten-wrapper .card img {
-        height: 15vh;
     }
 }
 
@@ -169,23 +166,15 @@
         display: none;
     }
 
-    .konten-wrapper{
+    .konten-wrapper {
         margin-left: 5vw;
     }
 
-    .konten-wrapper .col{
-       display: flex;
-       justify-content: center;
-       align-items: center;
+    .konten-wrapper .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .notif {
-        margin-right: 15px;
-    }
-    .konten-wrapper .card img {
-        height: 17vh;
-    }
+
 }
-
-
-

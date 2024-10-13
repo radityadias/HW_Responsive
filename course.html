@@ -18,41 +18,50 @@
   </head>
   <body>
     <div class="wrapper">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="book-closed-svgrepo-com.svg" alt="" />
-          </a>
+      <!-- NAVBAR -->
+      <header>
+    <nav class="navbar navbar-expand-lg bg-body-none fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="sidebarToggle">
+          <h2 class="text-white">Belajarlah!</h2>
+        </a>
+        <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+          <li id="bellDropdown" class="nav-item dropdown">
+            <a class="nav-link d-flex align-items-center notif" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-bell bell-icon fs-3 text-white"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="bellDropdown">
+              <li class="dropdown-header">Full Stack</li>
+                  <li><a class="dropdown-item" href="fullstack.html">0 Terlewat</a></li>
+                  <li><a class="dropdown-item" href="fullstack.html">3 Task Tersedia</a></li>
+                  <li><a class="dropdown-item" href="fullstack.html">3 Exam Tersedia</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-header">UI/UX</li>
+                  <li><a class="dropdown-item" href="course.html">Kosong</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-header">Data Mining</li>
+                  <li><a class="dropdown-item" href="course.html">Kosong</a></li>
+            </ul>
+          </li>
           <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasSidebar"
-            aria-controls="offcanvasSidebar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown" id="profile">
-                <a
-                  href="#"
-                  class="nav-link"
-                  id="profileDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  type="button"
-                >
-                  <img src="profile.svg" alt="Profile" class="profile-icon" />
-                </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="profileDropdown"
-                >
-                  <li class="dropdown-img-container">
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasSidebar"
+              aria-controls="offcanvasSidebar"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>  
+          <li class="nav-item dropdown collapse navbar-collapse" id="profile">
+            <a class="nav-link d-flex align-items-center" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="profile.svg" alt="Profile" class=" profile-icon" width="40" height="40">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end position-absolute" aria-labelledby="navbarDropdown">
+              <li class="dropdown-img-container">
                     <img
                       src="person-circle.svg"
                       alt="Profile Picture"
@@ -62,12 +71,12 @@
                   <li class="line"></li>
                   <li><a class="dropdown-item" href="#">Settings</a></li>
                   <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-              </li>
             </ul>
-          </div>
-        </div>
-      </nav>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
       <div
         class="offcanvas offcanvas-end"
@@ -95,12 +104,12 @@
               />
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"
+              <a class="nav-link" aria-current="page" href="Beranda.html"
                 ><i class="bi bi-house"></i><span> Dashboard</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="profile.html"
                 ><i class="bi bi-person"></i><span> Profile</span></a
               >
             </li>
@@ -110,7 +119,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="course.html"
                 ><i class="bi bi-book"></i><span> Course</span></a
               >
             </li>
@@ -127,13 +136,14 @@
             <li class="nav-item">
               <a class="nav-link" href="#"
                 ><i class="bi bi-currency-dollar"></i
-                ><span> Pembayaran</span></a
+                ><span> Payment</span></a
               >
             </li>
           </ul>
         </div>
       </div>
 
+      <!-- SIDEBAR -->
       <div class="sidebar-wrapper">
         <div class="sidebar">
           <ul class="nav flex-column">
@@ -144,7 +154,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="profile.html"
                 ><i class="bi bi-person"></i><span> Profile</span></a
               >
             </li>
@@ -171,7 +181,7 @@
                 >
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
-                    <a class="dropdown-item color-dark" href="#"
+                    <a class="dropdown-item color-dark" href="fullstack.html"
                       ><span>Full Stack</span> <i class="bi bi-braces"></i
                     ></a>
                   </li>
@@ -207,14 +217,15 @@
         </div>
       </div>
 
+      <!-- KONTEN -->
       <div class="konten-wrapper">
         <div class="row">
           <div class="col-12">
             <h4>Course</h4>
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-            <div class="col mt-3">
+        <div class="row">
+            <div class="col col-md-auto mt-3">
                 <div class="card" style="width: 18rem;">
                     <img src="fs.svg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -223,7 +234,7 @@
                             <div class="progress-bar" style="width: 70%">70%</div>
                         </div>
                     <div class="wrapper-button d-flex justify-content-end">
-                       <a href="#" class="btn btn-success mt-3">Lihat <i class="bi bi-arrow-right"></i></a>
+                       <a href="fullstack.html" class="btn btn-success mt-3">Lihat <i class="bi bi-arrow-right"></i></a>
                     </div>
                     </div>
                     <ul class="list-group list-group-flush">
@@ -233,7 +244,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col mt-3">
+            <div class="col col-md-auto mt-3">
                 <div class="card" style="width: 18rem;">
                     <img src="fs.svg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -253,7 +264,7 @@
                     
                 </div>
             </div>
-            <div class="col mt-3">
+            <div class="col col-md-auto mt-3">
                 <div class="card" style="width: 18rem;">
                     <img src="fs.svg" class="card-img-top" alt="...">
                     <div class="card-body">
